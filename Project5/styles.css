@@ -1,0 +1,92 @@
+h1 {
+  text-align: center;
+}
+
+body {
+  /* VARIABLES */
+  --screen-height: 100vh;
+  --text-color: white;
+  --background-color: navy;
+  
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: flex-end;
+  background-color: var(--background-color);
+  position: fixed;
+  width: 90%;
+  top: 0;
+}
+
+#welcome-section {
+  line-height: var(--screen-height);
+  vertical-align: middle;
+  text-align: center;
+  height: var(--screen-height);
+  font-family: Lobster, cursive;
+  font-size: 32px;
+}
+
+#projects {
+  border: solid 3px;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+#project {
+  display: flex;
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  color: var(--text-color);
+}
+
+#project-list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media (max-width: 500px) {
+  #project-list {
+    flex-direction: column;
+  }
+}
+
+.project-title {
+  text-align: center;
+}
+
+#github-plug {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#profile-link {
+  color: var(--text-color);
+}
+
+.nav-button {
+  font-size: 18px;
+  border-radius: 5px;
+  color: var(--background-color);
+  margin-left: 10px;
+}
