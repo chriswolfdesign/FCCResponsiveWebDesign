@@ -1,0 +1,255 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<link href="styles.css" rel="stylesheet"/>
+
+<!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in 
+the JS Editor before beginning. Feel free to delete this message once you have 
+read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+
+<!--
+Project 4: Technical Documentation Page
+
+A page where I discuss the technicalities of the Java programming language.
+
+@author Chris Wolf
+@version November 27, 2018
+chriswolfdesign@gmail.com
+-->
+<!-- TODO: Finish inputting code for Using Our Own Objects example -->
+<nav id="navbar">
+  <header><h2>Java Programming Language</h2></header>
+  <div>
+    <a href="#Welcome_to_Java" class="nav-link"><h3>Welcome to Java</h3></a>
+  </div>
+  <div>
+    <a href="#Why_Learn_Java" class="nav-link"><h3>Why Learn Java</h3></a>
+  </div>
+  <div>
+    <a href="#Hello_World" class="nav-link"><h3>Hello World</h3></a>
+  </div>
+  <div>
+    <a href="#Taking_Input_From_User" class="nav-link">
+      <h3>Taking Input From User</h3></a>
+  </div>
+  <div>
+    <a href="#Using_Our_Own_Objects" class="nav-link">
+      <h3>Using Our Own Objects</h3></a>
+  </div>
+  <div>
+    <a href="#Closing_Remarks" class="nav-link"><h3>Closing Remarks</h3></a>
+  </div>
+</nav>
+<main id="main-doc">
+  <div id="header">
+    <u><h1>The Java Programming Language</h1></u>
+  </div>
+  <div id="sections">
+    <section id="Welcome_to_Java" class="main-section">
+      <header><h2>Welcome to Java</h2></header>
+      <p>Java is a programming language maintained by Oracle.  It is an 
+      Object-Oriented language and is very popular and powerful.</p><p>Below 
+      we will discuss many aspects of the Java programming language.</p>
+    </section>
+    <section id="Why_Learn_Java" class="main-section">
+      <header><h2>Why Learn Java</h2></header>
+      <p>There are many reasons to learn Java such as:</p>
+      <ul id="reasons_for_Java">
+        <li>In high demand</li>
+        <li>Is used on billions of devices world-wide</li>
+        <li>Is popular in Computer Science courses</li>
+        <li>Is used in Android development</li>
+        <li>Basic Concepts translate to other programming languages</li>
+      </ul>
+    </section>
+    <section id="Hello_World" class="main-section">
+      <header><h2>Hello World</h2></header>
+      <p>
+        As in all programming languages, we will first begin by taking a look 
+        at an example of a Hello World program: Hello.java
+      </p>
+      <pre>
+        <code>
+          public class Hello {
+            public static void main(String[] args) {
+              System.out.println("Hello World!");
+            }
+          }
+        </code>
+      </pre>
+      <p>Now let's take a look at this code.</p>
+      <p>
+        Notice the word <code>public</code>.  This means this class can be 
+        used by another Java class (more on classes in a moment).  This is the 
+        standard for basic classes you write.</p
+        >
+      <p>
+        Now notice the word class.  Classes in Java are like blueprints.  
+        Remember how I earlier mentioned that Java is an Object-Oriented 
+        language?  Classes are the instructions Java uses to determine how to 
+        build objects.
+      </p>
+      <p>
+        The last item to note on the first line is Hello.  That's the same as 
+        the name of our class!  That's not a coincidence.  Your class must be 
+        named the same as your file, not including the ".java" suffix.
+      </p>
+      <p>
+        We will only briefly look at the main method.  This is the method 
+        that our computer will run when we run this class.  It is important to 
+        have one main method in each project.
+      </p>
+      <p>
+        Lastly, let's take a look at <code>System.out.ptintln("Hello World!");
+        </code>.  This is the standard printing function in Java and will 
+        display the text: Hello World! to the terminal/command prompt.
+      </p>
+    </section>
+    <section id="Taking_Input_From_User" class="main-section">
+      <header><h2>Taking Input From User</h2></header>
+      <p>
+        In this section we will be looking at an example of how we can take 
+        input from a user and use that input in our program.
+      </p>
+      <pre>
+        <code>
+        import java.util.Scanner;
+        
+        public class Input {
+          public static void main(String[] args) {
+            Scanner scan = new Scanner(System.in);
+            System.out.print("Hi, what's your name? ");
+            String name = scan.nextLine();
+            System.out.println("It's a pleasure to meet you " + name + "!");
+          }
+        }
+        </code>
+      </pre>
+      <p>
+        The first new bit of code is the first line: <code>import 
+        java.util.Scanner;</code>.  As in most languages, Java has standard 
+        libraries we can use for convenience.  Scanner is one of these such 
+        libraries.  Scanner allows us to do exactly what we are attempting: 
+        take information in from the user at runtime.
+      </p>
+      <p>
+        The next bit of new code is <code>Scanner scan = new 
+        Scanner(System.in);</code>.  In order to use a class we must create 
+        one to use.  This is what is happening with <code>new Scanner</code>.  
+        We are then taking the new Scanner and assigning it to a Scanner 
+        variable called scan.  The <code>System.in</code> simply means we will 
+        be using the Systems standard input mechanism: the keyboard.
+      </p>
+      <p>
+        Now let's look at the line 
+        <code>Scanner name = scan.nextLine();</code>. 
+        <code>scan.nextLine()</code> is a method that takes in the next line 
+        the user types in.  Because of the question asked previously, the next 
+        thing the user types in will <b>HOPEFULLY</b> be the user's name.  Of 
+        course, there are defensive programming strategies we could employ to 
+        ensure the user inputs a name but these strategies are beyond the scope 
+        of this article.
+      </p>
+      <p>
+        Lastly, we greet the user by including their input text by means of 
+        concatenation.
+      </p>
+    </section>
+    <section id="Using_Our_Own_Objects" class="main-section">
+      <header><h2>Using Our Own Objects</h2></header>
+      <p>
+        We will now take a look at using our own Objects in Java.  Consider 
+        the following two classes.
+      </p>
+      <p>Square.java:</p>
+      <pre>
+        <code>
+          public class Square {
+            private int side;
+            
+            public Square(int side) {
+              this.side = side;
+            }
+            
+            public int getPerimeter() {
+              return side * 4;
+            }
+            
+            public int getArea() {
+              return side * side;
+            }
+          }
+        </code>
+      </pre>
+      <p>SquareDriver.java</p>
+      <pre>
+        <code>
+          public class SquareDriver {
+            public static void main(String[] args) {
+              Square s = new Square(5);
+              System.out.println("Perimeter: " + s.getPerimeter());
+              System.out.println("Area: " + s.getArea());
+            }
+          }
+        </code>
+      </pre>
+      <p>Let's start with Square.java.</p>
+      <p>
+        First, notice <code>private int side</code>.  This is called a 
+        <em>field</em>.  Every square object we create will now have a variable 
+        called side.
+      </p>
+      <p>
+        Now notice there is a strange method called 
+        <code>public Square(int side)</code>.  There's no return type for this 
+        method.  This is called a <em>constructor</em>.  Constructors are used 
+        to create new objects. <code>this.side = side;</code> simply tells our 
+        Square object to take the side value passed in by the constructor and 
+        assign it to be the side value for this Square object.
+      </p>
+      <p>
+        The methods <code>getPerimeter()</code> and <code>getArea()</code> are 
+        actually quite simple.  They return the perimeter and the area of the 
+        square respectively.  Feel free to look at the method declarations to 
+        see the implementation.
+      </p>
+      <p>Now for a look at SquareDriver.java.</p>
+      <p>
+        A driver is a conventional name for a Java class that runs the code of 
+        another class.  You can think of drivers as the classes that actually 
+        "do the work".
+      </p>
+      <p>
+        The first line we will study is <code>Square s = new Square(5);</code>.  
+        In this line, we use the Square constructor to create a Square who's 
+        side value is set to 5.  Then we assign this Square to the variable s.
+      </p>
+      <p>
+        The last two lines are very simple.  We simply use s's 
+        <code>getPerimeter()</code> and <code>getArea()</code> methods to help 
+        display s's perimeter and area respectively.
+      </p>
+    </section>
+    <section id="Closing_Remarks" class=main-section>
+      <header><h2>Closing Remarks</h2></header>
+      <p>
+        Please note that this is not a complete guide to the Java Programming 
+        Language.  This was simply a project for Free Code Camp where I discuss 
+        some of my favorite aspects of Java.  There is much more to this 
+        language than one person could possibly maintain on one webpage.
+      </p>
+      <p>
+        If you are interested in learning more about Java, I recommend looking 
+        into <a href="https://docs.oracle.com/javase/8/docs/" 
+          target="_blank">the official documentation page</a>.
+      </p>
+    </section>
+  </div>
+</main>

@@ -1,0 +1,30 @@
+
+body {
+  margin: 60px;
+}
+
+#header {
+  text-align: center;
+}
+
+#navbar {
+  position: fixed;
+  left: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 500px) {
+  #header {
+    text-align: left;
+  }
+}
+
+pre {
+  margin-bottom: -20px;
+}
+
+#main-doc {
+  margin-left: 300px;
+}
