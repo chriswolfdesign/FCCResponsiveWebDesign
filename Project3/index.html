@@ -1,0 +1,57 @@
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<link href="styles.css" rel="stylesheet"/>
+
+<!-- 
+Note to: Innovative Percussion
+
+I am huge fan of your products.  For this assignment I had to create a product landing page.  I have been using your products for years and chose to use your company as my model due to my comfort with your products.  The email form below does not work and used just for educational purposes.  If you do not approve of me using your company for my assignment, please email me at chriswolfdesign@gmail.com and I will be happy to take it down.  Thank you.
+-->
+<!-- 
+
+Hello Camper!
+
+For now, the test suite only works in Chrome! Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+
+<!-- 
+Project 3: Product Landing Page
+
+The third project in the Free Code Camp Curriculum.
+
+Build a page to help a company sell their product.
+
+@author Chris Wolf
+@version 1.0.0 (November 23, 2018)
+chriswolfdesign@gmail.com
+
+-->
+
+<main id="main">
+  <div id="header">
+    <img id="header-img" class="side" src="https://image.ibb.co/k6GaVV/iplogo.png" alt="company logo" />
+    <nav id="nav-bar" class="side">
+        <a class="nav-link"href="#video"><button>Video Review</button></a>
+        <a class="nav-link"href="#form"><button>Subscribe</button></a>
+      <a class="nav-link" href="#link"><button>Company Website</button></a>       
+    </nav>
+  </div>
+  <div id="video-div">
+    <iframe id="video" width="50%" height="315" src="https://www.youtube.com/embed/Zw7UFepcjFY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>Check out this video review of my favorite drumsticks!
+  </div>
+  <form id="form" action="https://www.freecodecamp.com/email-submit" method="GET">
+    <label id="email-label" for="email">
+      Would you like to subscribe to our newsletter?<br>
+      <input id="email" name="email" type="email" placeholder="Your email here">
+      <br>
+      <input type="submit" id="submit" />
+    </label>
+  </form>
+  <div id="link">
+    To see more about this company, visit their <a href="http://innovativepercussion.com/" target="_blank">webpage.</a>
+  </div>
+</main>

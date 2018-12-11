@@ -1,0 +1,59 @@
+
+body {
+  --background-color: black;
+  background-color: var(--background-color);
+  color: white;
+}
+
+#header {
+  position: fixed;
+  top: 0px;
+  z-index: 1;
+  width: 100%;
+  background-color: var(--background-color);
+}
+
+#nav-bar {
+  right: 0;
+  bottom: 0;
+  margin-right: 20px;
+  position: absolute;
+  table-layout: fixed;
+  display: flex;
+}
+
+@media (max-width: 1000px) {
+  #nav-bar {
+    flex-direction: column;
+  }
+}
+
+#video-div {
+  text-align: center;
+  margin-top: 150px;
+}
+
+.side {
+  display: inline-block;
+}
+
+#form {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#email {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#link {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 24px;
+}
+
+.nav-link {
+  background-color: black;
+  color: white;
+}
